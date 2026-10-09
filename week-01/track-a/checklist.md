@@ -2,103 +2,115 @@
 
 **Track A** is for members who know zero or minimal coding, or who want to brush up the basics.
 Work through the checklist in order, one day at a time. Every day ends with a small hands-on
-deliverable — reading alone is not the work. Flip each `- [ ]` to `- [x]` as you finish it, then
+deliverable — watching alone is not the work. Flip each `- [ ]` to `- [x]` as you finish it, then
 commit your changes in your own fork.
 
-**Scope:** Python syntax and building blocks. The goal is to be able to write, run, and debug a small Python program by the end of the week.
+**Source video:** [Python Full Course for Beginners to Advanced (12 hours)](https://youtu.be/_aWbUudZ5Yo)
+**Week:** Mon 12 Oct 2026 → Mon 19 Oct 2026 · **7 topic days** (Mon–Sun) + a review Monday.
+**Goal by Monday 19 Oct:** write and run small Python programs up to **`if` / `elif` / `else`**.
+**Scope this week:** watch the course from the start to the **end of the If-Else chapter (0:00 → 2:16:14)**.
+
+> Each day's questions live in the matching file under [`worksheet/`](worksheet/README.md), e.g. Day 1
+> questions are in [`worksheet/day-1.md`](worksheet/day-1.md).
 
 ---
 
-## Sunday 4 Oct 2026 — Setup + your first program
+## Day 1 — Monday 12 Oct 2026 — Setup + your first program
 
-- [ ] **Install Python 3.12+** — download from python.org and confirm with `python --version`. Why it matters: every topic this week runs on a real interpreter.
-  - https://www.python.org/downloads/
-- [ ] **Pick an editor: VS Code with the Python extension, or Google Colab.** Why it matters: you need a reliable place to type and run code every day.
-  - VS Code: https://code.visualstudio.com/docs/languages/python
-  - Kaggle Learn (free, browser-based): https://www.kaggle.com/learn/python
-- [ ] **Run your first program** — print your name and a short greeting with `print()`. Why it matters: it confirms your setup works before we touch real logic.
-  - **Deliverable:** a file `hello.py` that prints two lines; paste the output snippet.
+**Watch:** [0:00 – 15:32](https://youtu.be/_aWbUudZ5Yo?t=0)
 
-## Monday 5 Oct 2026 — Syntax, print, input, variables, types
+- [ ] **Introduction & course overview** — `0:00` · what the course covers and how to follow it. Why it matters: you know the map before you start walking.
+- [ ] **Python history & origin** — `2:13` · where Python came from and why it is used. Why it matters: context makes the design choices make sense.
+- [ ] **How Python works internally** — `4:47` · interpreter vs compiler. Why it matters: explains why Python runs line by line.
+- [ ] **Installation & VS Code setup** — `6:19` · install Python and set up VS Code (or use Colab). Why it matters: every topic this week runs on a real interpreter.
+- **Deliverable:** a file `hello.py` that prints your name and a greeting.
+- **Worksheet:** [Day 1](worksheet/day-1.md)
 
-- [ ] **Comments and basic syntax** — reading and writing a clean script. Why it matters: readable code is the foundation of everything after this.
-  - https://docs.python.org/3/tutorial/introduction.html
-- [ ] **Variables and built-in types** — `int`, `float`, `str`, `bool`; assignment and naming. Why it matters: variables are how programs remember data between steps.
-  - https://docs.python.org/3/library/stdtypes.html
-- [ ] **Input and type conversion** — `input()`, and turning strings into numbers with `int()` / `float()`. Why it matters: programs that only print fixed text are not very useful.
-  - https://docs.python.org/3/library/functions.html#input
-- [ ] **Your first mini scripts** — a small program that asks for a name and prints a personalized greeting with a number spelled out. Why it matters: ties input to output and type conversion together.
-  - **Deliverable:** `greeting.py` that asks for a name and age, then prints a one-line summary.
+## Day 2 — Tuesday 13 Oct 2026 — Comments, variables, and data types
 
-## Tuesday 6 Oct 2026 — Operators and strings
+**Watch:** [15:32 – 34:28](https://youtu.be/_aWbUudZ5Yo?t=932)
 
-- [ ] **Arithmetic operators** — `+ - * / // % **` and operator precedence. Why it matters: almost every computation a program does is a sequence of these.
-  - https://docs.python.org/3/tutorial/introduction.html
-- [ ] **Comparison and logical operators** — `==, !=, <, >, <=, >=` combined with `and`, `or`, `not`. Why it matters: comparison is what turns raw data into decisions.
-  - https://docs.python.org/3/reference/expressions.html
-  - https://realpython.com/python-operators-expressions/
-- [ ] **String basics** — quotes, concatenation, f-strings, and `len()` / `.lower()` / `.upper()`. Why it matters: text is the most common data form in beginner projects.
-  - https://docs.python.org/3/tutorial/introduction.html
-  - https://realpython.com/python-strings/
-- [ ] **Mini string calculator** — take two numbers and an operator, then print a formatted result. Why it matters: exercises operator precedence plus clean string output.
-  - **Deliverable:** `calc.py` with a formatted result line.
+- [ ] **Comments & variables** — `15:32` · writing clean comments, creating and naming variables. Why it matters: variables are how a program remembers data between steps.
+- [ ] **Data types in Python** — `25:19` · `int`, `float`, `str`, `bool`, and `type()`. Why it matters: the type decides what operations are allowed.
+- **Deliverable:** a script `profile.py` that stores your name, age, height, and student status in correctly typed variables and prints each with its type.
+- **Worksheet:** [Day 2](worksheet/day-2.md)
 
-## Wednesday 7 Oct 2026 — Conditionals
+## Day 3 — Wednesday 14 Oct 2026 — Strings & type conversion
 
-- [ ] **if / elif / else** — the basic decision structure. Why it matters: branching is what turns a recipe into a program.
-  - https://docs.python.org/3/tutorial/controlflow.html
-- [ ] **Truthiness** — how Python treats values as true/false in conditions. Why it matters: avoiding `if x == True` and handling empty lists/strings correctly.
-  - https://docs.python.org/3/tutorial/controlflow.html
-- [ ] **Mini guess-the-number game** — use `random.randint` and a loop to compare a guess against a secret. Why it matters: combines conditionals, input, and math in one small, complete program.
-  - **Deliverable:** `guess.py` that gives the user up to 5 guesses and prints a win/lose message.
+**Watch:** [34:28 – 51:49](https://youtu.be/_aWbUudZ5Yo?t=2068)
 
-## Thursday 8 Oct 2026 — Loops
+- [ ] **Strings** — `34:28` · quotes, concatenation, indexing, and methods like `.upper()`, `.lower()`, `.strip()`. Why it matters: text is the most common data a beginner handles.
+- [ ] **Type conversion** — `34:28` · `int()`, `float()`, `str()`, and f-strings. Why it matters: data almost always arrives as text and must be converted before it can be computed.
+- **Deliverable:** a script `receipt.py` that builds a formatted multi-line receipt from fixed values using f-strings.
+- **Worksheet:** [Day 3](worksheet/day-3.md)
 
-- [ ] **for loops and range()** — iterating a fixed number of times. Why it matters: the workhorse of repeated computation.
-  - https://docs.python.org/3/tutorial/controlflow.html
-- [ ] **while loops and loop control** — `break` and `continue`. Why it matters: lets you write interactive or condition-driven repetition.
-  - https://docs.python.org/3/tutorial/controlflow.html
-- [ ] **Loop patterns** — counting, summing, and building lists. Why it matters: these patterns recur in every data task ahead.
-  - https://docs.python.org/3/tutorial/controlflow.html
-- [ ] **Number-guessing loop with a tally** — the guess game from Wednesday, now counting attempts and letting the user retry. Why it matters: extends the Wednesday deliverable into real control flow.
-  - **Deliverable:** updated `guess.py` and its displayed session.
+## Day 4 — Thursday 15 Oct 2026 — Input & output
 
-## Friday 9 Oct 2026 — Lists and dictionaries
+**Watch:** [51:49 – 59:11](https://youtu.be/_aWbUudZ5Yo?t=3109)
 
-- [ ] **Lists** — creation, indexing, slicing, and common methods. Why it matters: lists are the default ordered collection in Python.
-  - https://docs.python.org/3/tutorial/datastructures.html
-  - https://docs.python.org/3/library/stdtypes.html
-- [ ] **List operations** — `append`, `extend`, `insert`, `remove`, `pop`, and sorting. Why it matters: they are the operations you will actually use on data.
-  - https://docs.python.org/3/tutorial/datastructures.html
-- [ ] **Dictionaries** — key/value pairs, lookup, and safe access. Why it matters: the primary way to map labels to values, and the closest thing Python has to a spreadsheet cell.
-  - https://docs.python.org/3/tutorial/datastructures.html
-  - https://realpython.com/python-dicts/
-- [ ] **Student grades report** — load a small list of names and a parallel list (or dict) of scores, then print each student's letter grade. Why it matters: practices lists, dicts, loops, and conditionals in one deliverable.
-  - **Deliverable:** `grades.py` and its printed report.
+- [ ] **`input()`** — `51:49` · reading a value typed by the user. Why it matters: programs that only print fixed text are not very useful.
+- [ ] **Formatted output** — `51:49` · `print()` with f-strings and separators. Why it matters: readable output is how you check your program is correct.
+- [ ] **Converting input** — combining `input()` with `int()` / `float()`. Why it matters: `input()` always returns a string — this is the single most common beginner bug.
+- **Deliverable:** a script `circle.py` that asks for a radius and prints the area and circumference of a circle.
+- **Worksheet:** [Day 4](worksheet/day-4.md)
 
-## Saturday 10 Oct 2026 — Functions
+## Day 5 — Friday 16 Oct 2026 — Operators
 
-- [ ] **Defining and calling functions** — `def`, parameters, `return`, and docstrings. Why it matters: functions are how code becomes reusable and testable.
-  - https://docs.python.org/3/tutorial/controlflow.html
-- [ ] **Scope and defaults** — local vs global variables, and default arguments. Why it matters: protects your data and makes functions easier to call.
-  - https://docs.python.org/3/tutorial/controlflow.html
-- [ ] **Functions over collections** — `min`, `max`, `sum`, `len`, and list comprehensions. Why it matters: builds on Friday and prepares you for advanced Python.
-  - https://docs.python.org/3/library/functions.html
-- [ ] **A tool you can reuse** — a function that converts a list of numbers into a list of letter grades, plus a small demo. Why it matters: moves the Friday deliverable into a clean, reusable form.
-  - **Deliverable:** `grades.py` with one reusable function and a short demo.
+**Watch:** [59:11 – 1:39:27](https://youtu.be/_aWbUudZ5Yo?t=3551)
 
-## Sunday 11 Oct 2026 — Combining fundamentals
+- [ ] **Arithmetic operators** — `59:11` · `+ - * / // % **` and operator precedence. Why it matters: almost every computation is a sequence of these.
+- [ ] **Comparison & logical operators** — `59:11` · `== != < > <= >=` with `and`, `or`, `not`. Why it matters: comparisons turn raw data into decisions.
+- [ ] **Assignment operators** — `+=`, `-=`, `*=`, `/=`. Why it matters: they are the compact form you will read everywhere.
+- **Deliverable:** a script `bill.py` that splits a bill between people, rounds to 2 decimals, and prints the share.
+- **Worksheet:** [Day 5](worksheet/day-5.md)
 
-- [ ] **Write and run a small program from scratch** — a single script that asks for a few inputs and uses variables, conditionals, loops, and functions to produce a result. Why it matters: integration is the skill that separates beginners from people who can actually build things.
-  - https://docs.python.org/3/tutorial/introduction.html
-- [ ] **Debugging basics** — reading tracebacks and using `print()` and `pdb` to find the fault. Why it matters: debugging is a daily skill, not a last resort.
-  - https://docs.python.org/3/tutorial/errors.html
-- [ ] **Mini project** — a "monthly bill estimator" or "tip calculator": inputs, types, conditionals, loops, and functions. Why it matters: applies the whole week in one deliverable.
-  - **Deliverable:** `budget.py` with input, calculation, and a formatted output summary.
+## Day 6 — Saturday 17 Oct 2026 — If / elif / else
 
-## Monday 12 Oct 2026 — Review, catch-up, and worksheet
+**Watch:** [1:39:27 – 2:16:14](https://youtu.be/_aWbUudZ5Yo?t=5967)
 
-- [ ] **Review the week** — read back every day's deliverable and confirm each one runs cleanly.
+- [ ] **`if` statements** — `1:39:27` · running code only when a condition holds. Why it matters: branching is what turns a recipe into a program.
+- [ ] **`if` / `else` and `elif` chains** — handling more than two outcomes. Why it matters: real rules always have more than one case.
+- [ ] **Nested conditions & truthiness** — conditions inside conditions, and how Python treats empty values as false. Why it matters: avoids bugs like `if x == True`.
+- **Deliverable:** a script `grade.py` that takes a score and prints the matching letter grade, with a message for invalid input.
+- **Worksheet:** [Day 6](worksheet/day-6.md)
+
+## Day 7 — Sunday 18 Oct 2026 — Practice: combine everything up to if-else
+
+**Watch / re-watch:** any part of [0:00 – 2:16:14](https://youtu.be/_aWbUudZ5Yo?t=0) you found hard.
+
+- [ ] **Re-run every deliverable** from Day 1 to Day 6 and confirm each one runs cleanly.
+- [ ] **Debug a broken script** — take a program with a `NameError` and a `TypeError` and fix both. Why it matters: reading tracebacks is a daily skill.
+- [ ] **Mini project** — a single script that asks for a few inputs and uses variables, types, operators, and `if` / `elif` / `else` to produce a result (for example a movie-ticket price calculator by age). Why it matters: combining the week's ideas is the real test.
+- **Deliverable:** `miniproject.py` with input, a decision, and a formatted output.
+- **Worksheet:** [Day 7](worksheet/day-7.md)
+
+## Monday 19 Oct 2026 — Review, catch-up, and worksheet completion
+
+- [ ] **Review the week** — read back every day's deliverable and confirm each one runs.
 - [ ] **Catch up on anything missed**, using the official Python tutorial as your reference.
-- [ ] **Complete the Track A worksheet** — fill in every row and the reflection section for week 1.
-  - [Track A worksheet](week-01/track-a/worksheet.md)
+- [ ] **Complete every day worksheet** you have not finished yet.
+- [ ] **Fill the week reflection** at the end of the checklist.
+
+---
+
+## Documentation (read after all 7 days)
+
+Work through these once you have finished the days above — they are the official references you will
+keep coming back to.
+
+- **The Python Tutorial — An Informal Introduction:** https://docs.python.org/3/tutorial/introduction.html
+- **Built-in Types (int, float, str, bool, list, dict):** https://docs.python.org/3/library/stdtypes.html
+- **Built-in Functions (`input`, `print`, `int`, `len`, `range`):** https://docs.python.org/3/library/functions.html
+- **More Control Flow Tools (`if`, `for`, `while`):** https://docs.python.org/3/tutorial/controlflow.html
+- **Data Structures (lists, tuples, sets, dicts):** https://docs.python.org/3/tutorial/datastructures.html
+- **Errors and Exceptions:** https://docs.python.org/3/tutorial/errors.html
+- **Real Python — operators and expressions:** https://realpython.com/python-operators-expressions/
+- **Real Python — strings:** https://realpython.com/python-strings/
+
+## Week reflection
+
+- **Biggest takeaway this week:** _______________________________________________
+- **Blocker or stumbling point:** _______________________________________________
+- **Open question:** _______________________________________________
+- **One topic I want to revisit:** _______________________________________________
+- **Goal for next week:** _______________________________________________

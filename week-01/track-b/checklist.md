@@ -1,115 +1,120 @@
 # Track B — Advanced Python: Week 1 Checklist
 
-**Track B** is for members who are comfortable with variables, functions, and loops, and want to
-gradually move toward Python libraries. This week covers classes, exceptions, comprehensions,
-iterators, generators, packaging, and the beginning of numpy and matplotlib. Every day ends with a
-small hands-on deliverable. Flip each `- [ ]` to `- [x]` as you finish, then commit your changes
-in your own fork.
+**Track B** is for members who are comfortable with variables, functions, and loops and want to move
+toward Python libraries. Work through the checklist in order, one day at a time. Every day ends with a
+hands-on deliverable — watching alone is not the work. Flip each `- [ ]` to `- [x]` as you finish, then
+commit your changes in your own fork.
 
-**Scope:** write Python like a toolmaker, not just a scriptrunner. You will end the week able to
-organize code into classes and modules, handle errors, use comprehensions and generators, and run a
-real numpy + matplotlib analysis.
+**Source video:** [Python Full Course for Beginners to Advanced (12 hours)](https://youtu.be/_aWbUudZ5Yo)
+**Week:** Mon 12 Oct 2026 → Mon 19 Oct 2026 · **7 topic days** (Mon–Sun) + a review Monday.
+**Goal by Monday 19 Oct:** exception handling, file handling, **OOP**, and the **advanced-Python
+concepts**, ending with the Bank Management System project.
+**Scope this week:** watch the course from **Exception handling to the end (6:23:24 → 11:34:50)**.
+
+> Each day's questions live in the matching file under [`worksheet/`](worksheet/README.md), e.g. Day 1
+> questions are in [`worksheet/day-1.md`](worksheet/day-1.md).
 
 ---
 
-## Sunday 4 Oct 2026 — Setup + foundations check
+## Day 1 — Monday 12 Oct 2026 — Exception handling + file handling
 
-- [ ] **Install Python 3.12+ and verify** — confirm with `python --version`. Why it matters: libraries next week need a recent, consistent interpreter.
-  - https://www.python.org/downloads/
-- [ ] **Set up a simple project folder** — a folder with `src/`, a data folder, and a `README.md`, plus a `.gitignore` for `__pycache__` and `.env`. Why it matters: you will reuse this layout for every week.
-  - https://docs.python.org/3/library/venv.html
-- [ ] **Create a virtual environment and confirm it works** — `python -m venv .venv`, activate it, and check `pip --version`. Why it matters: every project needs an isolated place for packages.
-  - https://docs.python.org/3/library/venv.html
-  - https://pip.pypa.io/en/stable/getting-started/
-- [ ] **Quick foundations check** — write a small script that uses a list, a loop, a conditional, and a function, and confirm it runs. Why it matters: it proves you have the base you need before we add new ideas.
-  - **Deliverable:** your workspace folder with a working test script.
+**Watch:** [6:23:24 – 6:52:30](https://youtu.be/_aWbUudZ5Yo?t=23004)
 
-## Monday 5 Oct 2026 — Object-oriented programming
+- [ ] **Exception handling** — `6:23:24` · `try`, `except`, `else`, `finally`, and raising specific errors. Why it matters: bad input and missing files are guaranteed, not hypothetical.
+- [ ] **Reading and writing files** — `6:43:23` · `open()`, modes, and `with` for clean-up. Why it matters: file I/O is the first step from pure computation to real data.
+- **Deliverable:** `reader.py` that reads a text file inside a `try` block and prints a clear message if the file is missing.
+- **Worksheet:** [Day 1](worksheet/day-1.md)
 
-- [ ] **Classes and objects** — `__init__`, attributes, and methods. Why it matters: classes are how you bundle data and behavior into reusable tools.
-  - https://docs.python.org/3/tutorial/classes.html
-- [ ] **Methods vs functions, and `self`** — instance methods, the role of `self`, and calling methods on objects. Why it matters: the biggest source of early confusion in Python.
-  - https://docs.python.org/3/tutorial/classes.html
+## Day 2 — Tuesday 13 Oct 2026 — File-handling project + OOP intro
+
+**Watch:** [6:52:30 – 8:00:00](https://youtu.be/_aWbUudZ5Yo?t=24750)
+
+- [ ] **File handling project** — `6:52:30` · build the file-based example from the video. Why it matters: it turns separate file operations into one working program.
+- [ ] **Classes and objects** — `7:24:17` · `class`, `__init__`, attributes, and `self`. Why it matters: classes bundle data and behaviour into reusable tools.
+- [ ] **Methods and `self`** — calling methods on objects. Why it matters: the biggest source of early confusion in Python.
+- **Deliverable:** `student.py` with a `Student` class (name, marks) and a method that prints a summary.
+- **Worksheet:** [Day 2](worksheet/day-2.md)
+
+## Day 3 — Wednesday 14 Oct 2026 — OOP: inheritance & polymorphism
+
+**Watch:** [8:00:00 – 9:18:32](https://youtu.be/_aWbUudZ5Yo?t=26657)
+
 - [ ] **Inheritance and `super()`** — subclassing, overriding, and calling the parent class. Why it matters: lets you extend existing tools without rewriting them.
-  - https://docs.python.org/3/tutorial/classes.html
-- [ ] **Mini project: a `Stock` and a `Portfolio` class** — model a share with a price and a portfolio that holds and values several shares. Why it matters: a realistic, small, object-oriented program.
-  - **Deliverable:** `portfolio.py` that prints the total value.
+- [ ] **Polymorphism** — the same method name behaving differently per class. Why it matters: the core idea behind reusable, swappable components.
+- [ ] **Encapsulation** — keeping data private and exposing methods. Why it matters: protects your data from accidental edits.
+- **Deliverable:** `shapes.py` with a base `Shape` and subclasses `Circle` and `Rectangle`, each with its own `area()`.
+- **Worksheet:** [Day 3](worksheet/day-3.md)
 
-## Tuesday 6 Oct 2026 — Exceptions and file I/O
+## Day 4 — Thursday 15 Oct 2026 — Advanced Python: comprehensions & lambdas
 
-- [ ] **Reading and writing files** — `open()`, `read`, `write`, and `with` for clean-up. Why it matters: file I/O is the first step from pure computation to real data.
-  - https://docs.python.org/3/tutorial/inputoutput.html
-  - https://docs.python.org/3/tutorial/errors.html
-- [ ] **Reading CSV files** — parse a small CSV into a list of rows and print a summary. Why it matters: nearly every data task starts with a delimited text file.
-  - https://docs.python.org/3/library/csv.html
-- [ ] **Handling exceptions** — `try`, `except`, `else`, `finally`, and raising specific errors. Why it matters: bad input and missing files are guaranteed, not hypothetical.
-  - https://docs.python.org/3/tutorial/errors.html
-- [ ] **Robust file reader** — a function that reads a CSV, catches a missing file and a bad row, and reports them. Why it matters: turns the Wednesday deliverable into something that does not crash on bad data.
-  - **Deliverable:** `reader.py` with output for a clean file and for a broken one.
+**Watch:** [9:18:32 – 9:45:00](https://youtu.be/_aWbUudZ5Yo?t=33512)
 
-## Wednesday 7 Oct 2026 — Comprehensions and lambdas
+- [ ] **List comprehensions** — `9:18:32` · the compact form of mapping and filtering. Why it matters: the single most common Python idiom you will read and write.
+- [ ] **Dict and set comprehensions** — building dictionaries and sets inline. Why it matters: the same idea applied to mappings and uniqueness.
+- [ ] **Lambdas with `map` / `filter`** — small anonymous functions. Why it matters: they appear everywhere in libraries and notebooks.
+- **Deliverable:** a script `comprehensions.py` that builds a list of squares, filters the even ones, and a dict of name → length, all in comprehension form.
+- **Worksheet:** [Day 4](worksheet/day-4.md)
 
-- [ ] **List comprehensions** — the compact form of mapping and filtering. Why it matters: the single most common Python idiom you will read and write.
-  - https://docs.python.org/3/tutorial/datastructures.html
-- [ ] **Dict and set comprehensions** — building dictionaries and sets inline. Why it matters: the same idea, applied to mappings and uniqueness.
-  - https://docs.python.org/3/tutorial/datastructures.html
-- [ ] **Lambdas and the `map` / `filter` built-ins** — small anonymous functions, and when to prefer a named function. Why it matters: they appear everywhere in libraries and notebooks.
-  - https://docs.python.org/3/reference/expressions.html
-- [ ] **Refactor Friday's work into comprehensions** — rewrite your list-building loops compactly, and time both to see the tradeoff. Why it matters: shows when brevity helps and when it hurts.
-  - **Deliverable:** a small benchmark table in a notebook or script.
+## Day 5 — Friday 16 Oct 2026 — Advanced Python: iterators, generators, decorators
 
-## Thursday 8 Oct 2026 — Iterators and generators
+**Watch:** [9:45:00 – 10:05:09](https://youtu.be/_aWbUudZ5Yo?t=33512)
 
-- [ ] **Iterables, iterators, and the `iter()`/`next()` protocol** — why they exist and what makes an object iterable. Why it matters: the foundation of `for` loops, and of lazy data processing.
-  - https://docs.python.org/3/howto/functional.html
-  - https://docs.python.org/3/library/stdtypes.html
-- [ ] **Generator functions with `yield`** — producing values lazily, one at a time. Why it matters: lets you process large datasets without loading them all into memory.
-  - https://docs.python.org/3/howto/functional.html
-- [ ] **Generator expressions** — the one-line `(x for x in ...)` form. Why it matters: the memory-light sibling of a list comprehension.
-  - https://docs.python.org/3/howto/functional.html
-- [ ] **A streaming line reader** — a generator that yields lines from a file one at a time, and counts them without storing them. Why it matters: a concrete use you will repeat with big data.
-  - **Deliverable:** `stream.py` and the count it prints for a sample file.
+- [ ] **Iterables and iterators** — the `iter()` / `next()` protocol. Why it matters: the foundation of `for` loops and of lazy data processing.
+- [ ] **Generators with `yield`** — producing values one at a time. Why it matters: lets you process large data without loading it all into memory.
+- [ ] **Decorators and modules** — wrapping functions and splitting code into files with `import`. Why it matters: how real Python projects are organised.
+- **Deliverable:** `stream.py` with a generator that yields numbers from a file one line at a time, plus a small decorator that prints how long a function takes.
+- **Worksheet:** [Day 5](worksheet/day-5.md)
 
-## Friday 9 Oct 2026 — Modules, venv, and pip
+## Day 6 — Saturday 17 Oct 2026 — OOP project: Bank Management System
 
-- [ ] **Writing and importing your own modules** — splitting code across files and using `import`. Why it matters: the day your scripts stop being one-file programs.
-  - https://docs.python.org/3/tutorial/modules.html
-- [ ] **Packages and `__init__.py`** — organizing modules into a package and importing it. Why it matters: prepares you for structured projects and libraries.
-  - https://docs.python.org/3/tutorial/modules.html
-- [ ] **Installed packages with venv and pip** — create a project-specific environment, install `numpy`, `pandas`, and `matplotlib`, and import them. Why it matters: this is exactly how the tools you will use for weeks 2 and 3 are set up.
-  - https://docs.python.org/3/library/venv.html
-  - https://pip.pypa.io/en/stable/
-  - https://numpy.org/doc/stable/user/quickstart.html
-- [ ] **A multi-file script** — refactor `portfolio.py` into `portfolio.py`, `models.py`, and a `__main__.py` entry point, and run it. Why it matters: moves you from script to package.
-  - **Deliverable:** the project tree and a successful run.
+**Watch:** [10:05:09 – 11:34:50](https://youtu.be/_aWbUudZ5Yo?t=36309)
 
-## Saturday 10 Oct 2026 — NumPy basics
+- [ ] **Follow the Bank Management System project** — `10:05:09` · classes, methods, and a menu loop. Why it matters: your first complete object-oriented program.
+- [ ] **Design your classes before coding** — list the classes and their methods on paper first. Why it matters: design before code is the habit that keeps projects from collapsing.
+- [ ] **Add your own feature** — deposit/withdraw validation, or a transaction history list. Why it matters: extending the example is how you prove you understood it.
+- **Deliverable:** `bank.py` that runs a menu with create-account, deposit, withdraw, and view-balance.
+- **Worksheet:** [Day 6](worksheet/day-6.md)
 
-- [ ] **Arrays vs lists** — why numpy arrays are faster and memory-lighter for numbers. Why it matters: the entire data stack after this rests on arrays.
-  - https://numpy.org/doc/stable/user/quickstart.html
-- [ ] **Creating and inspecting arrays** — `np.array`, `shape`, `dtype`, `reshape`, and `arange`/`linspace`. Why it matters: reading and inspecting data is the first step of any analysis.
-  - https://numpy.org/doc/stable/user/quickstart.html
-  - https://numpy.org/doc/stable/user/basics.types.html
-- [ ] **Universal functions and broadcasting** — element-wise math and how numpy aligns shapes. Why it matters: the core pattern behind nearly every numeric operation.
-  - https://numpy.org/doc/stable/user/quickstart.html
-- [ ] **Mini analysis** — load two small numeric files, compute row means and a correlation matrix, and print a summary. Why it matters: your first real numpy exercise with a deliverable.
-  - **Deliverable:** `numpy_basics.py` with the printed summary.
+## Day 7 — Sunday 18 Oct 2026 — Practice: consolidate advanced Python
 
-## Sunday 11 Oct 2026 — pandas + matplotlib intro
+**Watch / re-watch:** any part of [6:23:24 – 11:34:50](https://youtu.be/_aWbUudZ5Yo?t=23004) you found hard.
 
-- [ ] **Introducing pandas** — the `DataFrame` and `Series`, and why tabular data has a dedicated tool. Why it matters: pandas is the standard way to work with tables in Python.
-  - https://pandas.pydata.org/docs/getting_started/index.html
-- [ ] **Loading and inspecting a dataset** — `read_csv`, `head`, `info`, `describe`, and selecting columns and rows. Why it matters: every pandas session starts with inspection.
-  - https://pandas.pydata.org/docs/getting_started/index.html
-- [ ] **Plotting with matplotlib** — `plot`, `label`, `title`, and `show`. Why it matters: a picture is the fastest way to check what your data actually looks like.
-  - https://matplotlib.org/stable/tutorials/pyplot.html
-- [ ] **First pandas plot** — make a line chart of two columns and save it to a file. Why it matters: connects data, analysis, and visualization in one deliverable.
-  - **Deliverable:** `pandas_viz.py` producing a saved PNG.
+- [ ] **Re-run every deliverable** from Day 1 to Day 6 and confirm each one runs cleanly.
+- [ ] **Pick the hardest idea this week** (a generator, a decorator, inheritance) and implement it from memory, then verify with a tiny script.
+- [ ] **Refactor `bank.py`** into two files — a `models.py` for the classes and a `main.py` entry point — and run it. Why it matters: moves you from script to package.
+- **Deliverable:** the refactored project tree and a successful run.
+- **Worksheet:** [Day 7](worksheet/day-7.md)
 
-## Monday 12 Oct 2026 — Review, small library exercise, and worksheet
+## Monday 19 Oct 2026 — Review, catch-up, and worksheet completion
 
-- [ ] **Review the week** — read back every day's deliverable and confirm each runs cleanly.
-- [ ] **Catch up on anything missed**, using the official numpy and pandas manuals as references.
-- [ ] **Small library exercise** — pick one thing from the week you find hardest (a generator, a class, a pandas grouping), and implement it from memory, then verify it with a tiny script.
-- [ ] **Complete the Track B worksheet** — fill in every row and the reflection section for week 1.
-  - [Track B worksheet](week-01/track-b/worksheet.md)
+- [ ] **Review the week** — read back every day's deliverable and confirm each one runs.
+- [ ] **Catch up on anything missed**, using the official Python docs as your reference.
+- [ ] **Complete every day worksheet** you have not finished yet.
+- [ ] **Fill the week reflection** at the end of the checklist.
+
+---
+
+## Documentation (read after all 7 days)
+
+Work through these once you have finished the days above — they are the official references you will
+keep coming back to.
+
+- **Errors and Exceptions:** https://docs.python.org/3/tutorial/errors.html
+- **Input and Output (files, formatting):** https://docs.python.org/3/tutorial/inputoutput.html
+- **`csv` module:** https://docs.python.org/3/library/csv.html
+- **Classes (OOP):** https://docs.python.org/3/tutorial/classes.html
+- **Data Structures (comprehensions):** https://docs.python.org/3/tutorial/datastructures.html
+- **Functional programming HOWTO (iterators, generators, `map`/`filter`):** https://docs.python.org/3/howto/functional.html
+- **Modules:** https://docs.python.org/3/tutorial/modules.html
+- **Virtual environments and packages (`venv`, `pip`):** https://docs.python.org/3/tutorial/venv.html
+- **NumPy quickstart:** https://numpy.org/doc/stable/user/quickstart.html
+- **pandas getting started:** https://pandas.pydata.org/docs/getting_started/index.html
+- **Matplotlib pyplot tutorial:** https://matplotlib.org/stable/tutorials/pyplot.html
+
+## Week reflection
+
+- **Biggest takeaway this week:** _______________________________________________
+- **Blocker or stumbling point:** _______________________________________________
+- **Open question:** _______________________________________________
+- **One topic I want to revisit:** _______________________________________________
+- **Goal for next week:** _______________________________________________
