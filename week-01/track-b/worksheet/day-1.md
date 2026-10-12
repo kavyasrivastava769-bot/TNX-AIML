@@ -21,13 +21,30 @@ print(a / b)
 **Your code:**
 
 ```python
-# write your program here
 
-
+try:
+    a = int(input("First number: "))
+    b = int(input("Second number: "))
+    print(a / b)
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+finally:
+    print("Done")
 ```
 
+    Output
+    
+First number: 10
+Second number: 2
+5.0
+Done
+
+
+
+
+
 **What exception type do you catch, and why that one?**
-_______________________________________________________________________________
+I found ZeroDivisonError as dividing a number by zero is not allowed .
 
 ---
 
@@ -39,15 +56,25 @@ exist — **without** the program crashing. Use `with`.
 **Your code:**
 
 ```python
-# write your program here
+
+try:
+    with open("notes.txt", "r") as file:
+        for line in file:
+            print(line, end="")
+except FileNotFoundError:
+    print("File not found")
 
 
 ```
+if notes.txt exists
+Output
+hello I am Kavya srivastava
+
 
 **Output when the file is missing:**
 
 ```
-_______________________________________________________________________________
+File not found
 ```
 
 ---
@@ -63,11 +90,53 @@ You are given `marks.csv`, but one row may have a missing value. Write a functio
 **Your code:**
 
 ```python
-# write your program here
+
+import csv
+
+def calculate_average(filename):
+    valid_marks = []
+
+    with open(filename, "r", newline="") as file:
+        reader = csv.reader(file)
+        next(reader, None)
+
+        for row in reader:
+            try:
+                marks = [float(value) for value in row]
+                valid_marks.extend(marks)
+            except ValueError:
+                print(f"Skipping invalid row: {row}")
+
+    if not valid_marks:
+        return None
+
+    return sum(valid_marks) / len(valid_marks)
+
+
+try:
+    average = calculate_average("marks.csv")
+    if average is None:
+        print("No valid marks found")
+    else:
+        print("Average:", average)
+except FileNotFoundError:
+    print("CSV file not found")
 
 
 ```
+marks.csv
+
+Name,Marks
+Aman,80
+Riya,90
+Rahul,th
+Priya,70
+
+Output
+
+Skipping invalid row: ['Rahul', 'th']
+Average: 80.0
+
 
 **Why is `try` / `except` better than checking every value with `if` here?**
-_______________________________________________________________________________
-_______________________________________________________________________________
+`try`/`except` are better than `if` because it checks all the errors and invalid values instead of checking every possible value manually.
