@@ -20,8 +20,8 @@ concepts**, ending with the Bank Management System project.
 
 **Watch:** [6:23:24 – 6:52:30](https://youtu.be/_aWbUudZ5Yo?t=23004)
 
-- [ ] **Exception handling** — `6:23:24` · `try`, `except`, `else`, `finally`, and raising specific errors. Why it matters: bad input and missing files are guaranteed, not hypothetical.
-- [ ] **Reading and writing files** — `6:43:23` · `open()`, modes, and `with` for clean-up. Why it matters: file I/O is the first step from pure computation to real data.
+- [x] **Exception handling** — `6:23:24` · `try`, `except`, `else`, `finally`, and raising specific errors. Why it matters: bad input and missing files are guaranteed, not hypothetical.
+- [x] **Reading and writing files** — `6:43:23` · `open()`, modes, and `with` for clean-up. Why it matters: file I/O is the first step from pure computation to real data.
 - **Deliverable:** `reader.py` that reads a text file inside a `try` block and prints a clear message if the file is missing.
 - **Worksheet:** [Day 1](worksheet/day-1.md)
 

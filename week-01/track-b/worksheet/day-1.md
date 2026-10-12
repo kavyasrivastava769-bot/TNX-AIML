@@ -1,6 +1,6 @@
 # Track B — Day 1 Worksheet — Exception handling + file handling
 
-**Name:** ______________________________  **GitHub handle:** ______________________________
+**Name:** Kavya Srivastava  **GitHub handle:** https://github.com/kavyasrivastava769-bot
 **Track:** Track B (Advanced Python)  **Day:** 1  **Date:** Monday 12 Oct 2026
 
 > Fill in the gaps. Run every program and paste the **real** output.
