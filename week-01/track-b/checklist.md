@@ -29,9 +29,9 @@ concepts**, ending with the Bank Management System project.
 
 **Watch:** [6:52:30 – 8:00:00](https://youtu.be/_aWbUudZ5Yo?t=24750)
 
-- [ ] **File handling project** — `6:52:30` · build the file-based example from the video. Why it matters: it turns separate file operations into one working program.
-- [ ] **Classes and objects** — `7:24:17` · `class`, `__init__`, attributes, and `self`. Why it matters: classes bundle data and behaviour into reusable tools.
-- [ ] **Methods and `self`** — calling methods on objects. Why it matters: the biggest source of early confusion in Python.
+- [x] **File handling project** — `6:52:30` · build the file-based example from the video. Why it matters: it turns separate file operations into one working program.
+- [x] **Classes and objects** — `7:24:17` · `class`, `__init__`, attributes, and `self`. Why it matters: classes bundle data and behaviour into reusable tools.
+- [x] **Methods and `self`** — calling methods on objects. Why it matters: the biggest source of early confusion in Python.
 - **Deliverable:** `student.py` with a `Student` class (name, marks) and a method that prints a summary.
 - **Worksheet:** [Day 2](worksheet/day-2.md)
 
