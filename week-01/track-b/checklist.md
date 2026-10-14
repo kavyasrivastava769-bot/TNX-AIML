@@ -39,9 +39,9 @@ concepts**, ending with the Bank Management System project.
 
 **Watch:** [8:00:00 – 9:18:32](https://youtu.be/_aWbUudZ5Yo?t=26657)
 
-- [ ] **Inheritance and `super()`** — subclassing, overriding, and calling the parent class. Why it matters: lets you extend existing tools without rewriting them.
-- [ ] **Polymorphism** — the same method name behaving differently per class. Why it matters: the core idea behind reusable, swappable components.
-- [ ] **Encapsulation** — keeping data private and exposing methods. Why it matters: protects your data from accidental edits.
+- [x] **Inheritance and `super()`** — subclassing, overriding, and calling the parent class. Why it matters: lets you extend existing tools without rewriting them.
+- [x] **Polymorphism** — the same method name behaving differently per class. Why it matters: the core idea behind reusable, swappable components.
+- [x] **Encapsulation** — keeping data private and exposing methods. Why it matters: protects your data from accidental edits.
 - **Deliverable:** `shapes.py` with a base `Shape` and subclasses `Circle` and `Rectangle`, each with its own `area()`.
 - **Worksheet:** [Day 3](worksheet/day-3.md)
 
