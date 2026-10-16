@@ -49,9 +49,9 @@ concepts**, ending with the Bank Management System project.
 
 **Watch:** [9:18:32 – 9:45:00](https://youtu.be/_aWbUudZ5Yo?t=33512)
 
-- [ ] **List comprehensions** — `9:18:32` · the compact form of mapping and filtering. Why it matters: the single most common Python idiom you will read and write.
-- [ ] **Dict and set comprehensions** — building dictionaries and sets inline. Why it matters: the same idea applied to mappings and uniqueness.
-- [ ] **Lambdas with `map` / `filter`** — small anonymous functions. Why it matters: they appear everywhere in libraries and notebooks.
+- [x] **List comprehensions** — `9:18:32` · the compact form of mapping and filtering. Why it matters: the single most common Python idiom you will read and write.
+- [x] **Dict and set comprehensions** — building dictionaries and sets inline. Why it matters: the same idea applied to mappings and uniqueness.
+- [x] **Lambdas with `map` / `filter`** — small anonymous functions. Why it matters: they appear everywhere in libraries and notebooks.
 - **Deliverable:** a script `comprehensions.py` that builds a list of squares, filters the even ones, and a dict of name → length, all in comprehension form.
 - **Worksheet:** [Day 4](worksheet/day-4.md)
 
